@@ -1,0 +1,38 @@
+{
+  "name": "hc-lib",
+  "version": "1.1.0",
+  "description": "Library for HotWax Commerce",
+  "main": "dist/hc-lib.umd.js",
+  "module": "dist/hc-lib.esm.js",
+  "dependencies": {
+    "@angular/core": "^5.2.0",
+    "@angular/common": "5.0.3",
+    "rxjs": "^5.4.3",
+    "typescript": "^2.2.1",
+    "zone.js": "^0.8.17"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "^5.2.0",
+    "del": "^3.0.0",
+    "node-sass": "^4.7.2",
+    "rollup-plugin-angular": "^0.5.3",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-node-resolve": "^3.0.2",
+    "rollup-plugin-typescript": "^0.8.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy": "node tools/copy-package.js && node tools/cleanup.js",
+    "bundle": "rimraf dist && rollup -c rollup.config.umd.js && rollup -c rollup.config.esm.js && tsc ",
+    "postbundle": "node tools/removecode.js",
+    "build": "npm run bundle && npm run copy",
+    "publish": "cd ./dist && npm publish"
+  },
+  "keywords": [
+    "HC",
+    "commerce",
+    "library"
+  ],
+  "author": "Prasheel Soni <prasheelsoni11@gmail.com>",
+  "license": "ISC"
+}

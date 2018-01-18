@@ -1,0 +1,21 @@
+{
+  "name": "hc-lib",
+  "version": "1.1.0",
+  "description": "Library for HotWax Commerce",
+  "main": "dist/hc-lib.umd.js",
+  "module": "dist/hc-lib.esm.js",
+  "dependencies": {
+    "@angular/core": "^5.2.0",
+    "@angular/common": "5.0.3",
+    "rxjs": "^5.4.3",
+    "typescript": "^2.2.1",
+    "zone.js": "^0.8.17"
+  },
+  "keywords": [
+    "HC",
+    "commerce",
+    "library"
+  ],
+  "author": "Prasheel Soni <prasheelsoni11@gmail.com>",
+  "license": "ISC"
+}
